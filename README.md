@@ -9,3 +9,5 @@ The purpose of the list is to have an entertaining task tracker that will be fun
 It can be used by kids and/or adults.
 Currently there are no sound effects when you add and remove tasks but I plan to add that in the next version update also.
 
+The app was developed on the local server using MondoDB. It was later hosted on Heroku.
+To use this app you need to have a local server or host it online on some of the web hosting services.
