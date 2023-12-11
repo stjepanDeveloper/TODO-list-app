@@ -1,0 +1,35 @@
+<%- include("header", { bubbleText: "Hello, what are you getting done today?" }) -%>
+<div class="notebook">
+    <h1><%= listTitle %></h1>
+
+    <form action="/" method="post" class="add-task-form">
+        <input type="text" name="newTask" placeholder="New Task" autocomplete="off">
+        <input type="hidden" name="list" value="<%= listTitle %>">
+        <button type="submit" class="add-task-button">Add</button>
+    </form>
+
+    <% if (noTasks) { %>
+        <p>Please add more tasks!</p>
+    <% } else { %>
+        <ul>
+            <% newListTasks.forEach(task => { %>
+                <li class="task">
+                    <span class="task-text"><%= task.name %></span>
+                    <form action="/delete" method="post">
+                        <input type="hidden" name="listName" value="<%= listTitle %>">
+                        <input type="checkbox" name="checkbox" value="<%= task._id %>">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    <% } %>
+</div>
+
+<%- include("footer", { footerName: "stjepanDeveloper" }) %>
+
+
+
+
+
+

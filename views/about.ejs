@@ -1,0 +1,26 @@
+<!-- views/about.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About</title>
+</head>
+<body>
+
+<%- include("header", { bubbleText: "Pika Pika Pika?"}) %>
+
+
+  <div id="about-container" style="background-color: #fff200; border: 2px solid #000; padding: 20px; border-radius: 10px; margin-top: 20px;">
+    <h1>About This Pikachu-themed TODO List</h1>
+    <p>Hello! I hope you are enjoying the Pikachu-themed TODO list. This list was created with love by stjepanDeveloper.</p>
+    <p>You can add and remove tasks as much as you want. In the future, I will add the option to edit tasks as well.</p>
+    <p>Stay productive!</p>
+</div>
+</div>
+
+<%- include("footer", { footerName: "stjepanDeveloper" }) %>
+
+</body>
+</html>
