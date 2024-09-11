@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 const path = require('path');
 const helmet = require('helmet');
+const { v4: uuidv4 } = require('uuid');
 
 
 const app = express();
@@ -73,6 +74,11 @@ app.post("/", function (req, res) {
     console.error("Task name is undefined or empty.");
     return res.status(400).send("Task name cannot be empty.");
   }
+
+  let todos = [
+  { id: uuidv4(), task: 'Buy groceries', completed: false },
+  { id: uuidv4(), task: 'Clean the house', completed: false }
+];
 
   const task = new Task({
     name: taskName
